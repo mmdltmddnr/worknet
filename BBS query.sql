@@ -27,9 +27,6 @@ insert into user(userID,userPassword,userName,userGender,userEmail,userEmailHash
 -- update user set userCarModel = '삼성_SM7', userCarType = 1500, userCarTotalKmOld = userCarTotalKmNow, 
 -- userCarTotalKmNow = 4000,userCarGasMoney = 50000, userCarDay = curdate(), userCarMileage = (userCarTotalKmNow - userCarTotalKmOld)/(userCarGasMoney/userCarType) where userId like '이승욱';
 
-
-
-
 drop table if exists BBS;
 create table BBS (
 bbsID int,					-- 게시글번호
@@ -38,51 +35,49 @@ userID varchar(20),			-- ID
 bbsDate datetime,			-- 게시날짜
 bbsContent varchar(2048),	-- 게시내용
 bbsAvailable int,			-- 게시글공개,비공개
+bbsViewCount int default 0,	-- 조회수
 primary key(bbsID)
 );
 
-insert into bbs values(1, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(2, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(3, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(4, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(5, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(6, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(7, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(8, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(9, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(10, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(11, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(12, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(13, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(14, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(15, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(16, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(17, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(18, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(19, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(20, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(21, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(22, '더미글','이승욱',null,'더미글',1);
-insert into bbs values(23, '더미글','이승욱',null,'더미글',1);
+insert into bbs values(1, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(2, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(3, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(4, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(5, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(6, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(7, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(8, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(9, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(10, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(11, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(12, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(13, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(14, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(15, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(16, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(17, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(18, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(19, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(20, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(21, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(22, '더미글','이승욱',null,'더미글',1,0);
+insert into bbs values(23, '더미글','이승욱',null,'더미글',1,0);
 
 update bbs set bbsDate = '2019-11-07 10:42:00' where bbsDate is null;
 
-drop table if exists board;
-create table board(
-   userID varchar(20),
-    boardID int primary key,
-    boardTitle varchar(50),
-    boardContent varchar(2048),
-    boardDate datetime,
-    boardHit int default 0,
-    boardFile varchar(100),
-    boardRealFile varchar(100),
-    boardGroup int,  
-    boardSequence int,
-    boardLevel int
-);
-select * from board;
+select * from bbs;
 
+drop table if exists bbsreply;
+create table bbsreply (
+bbsID int,					-- 게시글번호
+replyID int,				-- 게시글 댓글번호
+userID varchar(20),			-- ID
+replyDate datetime,			-- 게시날짜
+replyContent varchar(2048)	-- 게시내용
+);
+
+select * from bbsreply;
+select replyID FROM bbsreply where bbsID = 24 order by replyID desc;
 
 drop table if exists repair;
 create table repair(
@@ -96,5 +91,4 @@ create table repair(
 );
 
 select * from repair;
-
 

@@ -77,7 +77,6 @@ replyContent varchar(2048)	-- 게시내용
 );
 
 select * from bbsreply;
-select replyID FROM bbsreply where bbsID = 24 order by replyID desc;
 
 drop table if exists repair;
 create table repair(

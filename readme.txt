@@ -4,6 +4,7 @@ jdk환경변수 설정이 필요 합니다.
 https://github.com/mmdltmddnr/worknet
 /util/Gmail.java의 구글아이디와 비밀번호 기입이 필요합니다.
 구글 계정의 보안설정에서 제3자 액서스가 필요합니다.
+emailSendAction.jsp에 from 변수 설정이 필요합니다.
 
 /util/DatabaseUtil.java 
 /usercar/UserCarDAO.java

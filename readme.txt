@@ -16,5 +16,3 @@ emailSendAction.jsp에 from 변수 설정이 필요합니다.
 BBS query.sql의 query 실행을 통한 table 생성이 필요 합니다.
 
 서버 구동 이후 크롬 및 익스플로러에서 실행하길 권장 합니다.
-<h1>테스트</h1>
-<h2>테스트</h2>

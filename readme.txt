@@ -13,6 +13,6 @@ emailSendAction.jsp에 from 변수 설정이 필요합니다.
 /BbsDAO/BbsDAO.java
 5개의 클래스 코드에 dbID와 dbPassword 변수의 데이터베이스 계정이 필요합니다.
 
-BBS query.sql의 query 실행을 통한 table 생성이 필요 합니다.(MYSQL으로 작업)
+BBS query.sql의 query 실행을 통한 table 생성이 필요 합니다.
 
 서버 구동 이후 크롬 및 익스플로러에서 실행하길 권장 합니다.

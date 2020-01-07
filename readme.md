@@ -2,7 +2,7 @@ JAVA / JSP 기반 차량관리 시스템
 =======
 목차
 - [프로젝트 소개](#프로젝트-소개)
-- [사용(가능)한 기술 및 툴](#사용(가능)한 기술 및 툴)
+- [기술 및 툴](#기술 및 툴)
 - [주요 기능 설명](#주요-기능-설명)
 
 
@@ -11,7 +11,7 @@ JAVA / JSP 기반 차량관리 시스템
 차량관리 시스템은 사용자가 개인 계정을 가지고 자신의 차량 정보를 등록하여 정비 및 주유 등의 지출내역을 관리하는 시스템이다.
 추가적으로 사용자는 지도 검색을 통해 주유소 정보를 찾을 수 있으며, 자유게시판을 이용하여 사용자들 간에 차량정보 공유가 가능하다.
 
-사용(가능)한 기술 및 툴
+기술 및 툴
 --------
 jre1.8.0, mysql-connector-java-8.0.18.jar, activation.jar, mail.jar, cos.jar, JDBC, JSP2.3, Servlet3.1, HTML5, CSS3, Javascript1.8.5, EL3.0, JSTL1.2, jQuery3.2.1, XML, Ajax, JSON, Bootstrap3.3.7, OpenApi (KakaoMap) etc, Eclipse 4.11.0, apache-tomcat-9.0.29, MYSQL Workbench 8.0CE etc.
 

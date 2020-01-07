@@ -4,7 +4,7 @@ JAVA / JSP 기반 차량관리 시스템
 - [프로젝트 소개](#프로젝트-소개)
 - [사용(가능)한 기술 및 툴](#사용(가능)한-기술-및-툴)
 - [주요 기능 설명](#주요-기능-설명)
-
+- [구동 참고 사항](#구동-참고-사항)
 
 프로젝트 소개
 --------
@@ -46,8 +46,6 @@ jre1.8.0, mysql-connector-java-8.0.18.jar, activation.jar, mail.jar, cos.jar, JD
 <br>
 <img src="https://github.com/mmdltmddnr/worknet/blob/master/images/directory.PNG">
 <br>
-<img src=""><br>
-
 
 ▷ 회원가입
 → user.java
@@ -143,7 +141,8 @@ View.jsp에서 현 세션의 회원정보와 댓글기록 회원이 일치할 �
 → kakaomap.jsp
 카카오맵API를 가져와서 키워드 검색을 통해 정보를 보여주는 지도API를 구현한 페이지
 
--------
+구동 참고 
+--------
 Eclipse 및 Tomcat 설치를 통한 구동이 필요합니다. jdk환경변수 설정이 필요 합니다.
 
 https://github.com/mmdltmddnr/worknet /util/Gmail.java의 구글아이디와 비밀번호 기입이 필요합니다. 
